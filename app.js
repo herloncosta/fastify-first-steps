@@ -26,9 +26,13 @@ fastify.route({
     handler: userValidated,
 })
 
-try {
-    fastify.listen({ port: PORT })
-} catch (error) {
-    fastify.log.error(error)
-    process.exit(1)
+const startServer = async () => {
+    try {
+        await fastify.listen({ port: PORT })
+    } catch (error) {
+        fastify.log.error(error)
+        process.exit(1)
+    }
 }
+
+startServer()
