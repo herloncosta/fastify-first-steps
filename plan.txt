@@ -1,0 +1,11 @@
+BACKEND
+
+MongoDB Atlas
+Node
+  - Fastify
+
+
+FRONTEND
+
+React
+Sass
